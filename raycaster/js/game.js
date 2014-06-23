@@ -651,10 +651,12 @@ map.addObject({
 
 map.addObject({
 	color: 'green',
-	texture: new Bitmap('img/zombie_pickup.png', 344, 698),
+	texture: new Bitmap('img/cowboy.png', 639, 1500),
 	height: .7,
-	width: .2,
-	floorOffset: 0
+	width: .225,
+	floorOffset: 0,
+	speed: .1,
+	logic: badGuyLogic()
 },16.5,2);
 
 // setInterval(function(){
@@ -670,8 +672,8 @@ function badGuyLogic(base){
 		//console.log('logic!')
 
 		if(self.distanceFromPlayer < 4){
-			this.x += this.speed * Math.cos(this.render.angleToPlayer);
-			this.y += this.speed * Math.sin(this.render.angleToPlayer);
+			//this.x += this.speed * Math.cos(this.render.angleToPlayer);
+			//this.y += this.speed * Math.sin(this.render.angleToPlayer);
 		}
 	};
 }
